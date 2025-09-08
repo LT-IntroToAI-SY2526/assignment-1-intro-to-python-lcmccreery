@@ -1,5 +1,5 @@
 # Assignment 1: AI-Generated Python Problems
-# Name: [Your Name Here]
+# Name: [Liam McCreery]
 
 """
 AI-Generated Problem Set
@@ -20,7 +20,14 @@ Remember: The goal is to LEARN, not just get working code!
 
 """
 MY ORIGINAL AI PROMPT:
-[Paste the prompt you used to generate your problem set here]
+I'm learning Python basics in a high school programming class.I am new to programming. Can you create 5-7 practice problems that cover:
+
+Variables and basic data types
+Conditionals (if/elif/else)
+Loops (for and while)
+Functions
+Basic list operations
+Make them progressively more challenging. Make sure each problem has clear instructions and example inputs/outputs.
 
 Example: "I'm learning Python basics in a high school programming class. 
 I have some experience with Java. Can you create 5-7 practice problems that cover..."
@@ -31,8 +38,9 @@ I have some experience with Java. Can you create 5-7 practice problems that cove
 # =============================================================================
 
 """
-PROBLEM 1: [Problem Title/Description]
-[Copy the complete problem description from your AI assistant]
+PROBLEM 1: Say Hello! (Variables and Data Types)
+Write a program that stores your name and age in variables and then prints a message like:
+"Hi, my name is Alex and I am 16 years old."
 
 Example:
 Problem: Write a function called 'is_even' that takes an integer and returns 
@@ -43,15 +51,26 @@ Example inputs/outputs:
 - is_even(7) should return False
 """
 
+def calculate_grade(score):
 
 
 
+    if score >= 90:
+        return "a"
+    if score >= 80:
+        return "b"
+    if score >= 70:
+        return "c"
 
-
-
-
-
-
+def odd_even(number):
+    if number >= 5:
+        return "odd"
+    if number >= 4:
+        return "even"
+    if number >= 3:
+        return "odd"
+    if number >= 2:
+        return "even"
 
 # =============================================================================
 # PART 3: TESTING YOUR SOLUTIONS
@@ -69,11 +88,15 @@ print(f"is_even(4): {is_even(4)}")  # Should print True
 print(f"is_even(7): {is_even(7)}")  # Should print False
 """
 
-print("Testing Problem 1:")
-# Add your tests here
+print("\nTesting problem 1: "+ str(calculate_grade(87)))
+
+
+print()
 
 print("\nTesting Problem 2:")
-# Add your tests here
+
+
+
 
 print("\nTesting Problem 3:")
 # Add your tests here
