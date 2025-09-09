@@ -27,7 +27,10 @@ def absolute(n: int) -> int:
     Returns:
         the absolute value of the passed in number
     """
-    raise NotImplementedError("absolute")
+    if n < 0:
+        return -1 * n 
+    return n
+   
 
 
 def factorial(n: int) -> int:
@@ -40,7 +43,11 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
-    raise NotImplementedError("factorial")
+    result = 1
+    for num in range (1,n):
+        result = result * num # result *= num
+    print(result)
+    return result
 
 
 T = TypeVar("T")
@@ -57,7 +64,11 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
-    raise NotImplementedError("every_other")
+    # this is the pythonic way
+
+    return lst[::2]
+
+ 
 
 
 def sum_list(lst: List[int]) -> int:
@@ -125,12 +136,17 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
 # this line causes the nested code to be skipped if the file is imported instead of run
 if __name__ == "__main__":
     assert absolute(-1) == 1, "absolute of -1 failed"
+    assert absolute(4) == 4, "absolute of 4 failed"
     assert factorial(4) == 24, "factorial of 4 failed"
+    assert factorial(5) == 120, "factorial of 5 failed"
+    assert factorial (1) == 1, "factorial of 1 failed"
+    assert factorial (0) == 1, "factorial of 1 failed"
     assert every_other([1, 2, 3, 4, 5]) == [
         1,
         3,
         5,
     ], "every_other of [1,2,3,4,5] failed"
+    assert every_other([12, 23, 35, 48, 53, 63]) == [12, 35, 53]
     assert sum_list([1, 2, 3]) == 6, "sum_list of [1,2,3] failed"
     assert mean([1, 2, 3, 4, 5]) == 3, "mean of [1,2,3,4,5] failed"
     assert median([1, 2, 3, 4, 5]) == 3, "median of [1,2,3,4,5] failed"
