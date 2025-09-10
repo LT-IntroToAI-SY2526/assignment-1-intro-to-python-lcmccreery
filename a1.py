@@ -72,6 +72,18 @@ def odd_even(number):
     if number >= 2:
         return "even"
 
+def average(numbers):
+    total = sum(numbers)       # sum all the numbers in the list
+    count = len(numbers)       # find how many numbers are in the list
+    avg = total / count        # calculate average by dividing total by count
+    return avg                 # send the result back when function is called
+
+
+
+
+
+
+
 # =============================================================================
 # PART 3: TESTING YOUR SOLUTIONS
 # =============================================================================
@@ -91,9 +103,7 @@ print(f"is_even(7): {is_even(7)}")  # Should print False
 print("\nTesting problem 1: "+ str(calculate_grade(87)))
 
 
-print()
-
-print("\nTesting Problem 2:")
+print("\nTesting Problem 2:"+ str(odd_even(5)))
 
 
 
