@@ -77,8 +77,30 @@ def average(numbers):
     count = len(numbers)       # find how many numbers are in the list
     avg = total / count        # calculate average by dividing total by count
     return avg                 # send the result back when function is called
+user_input = input("Enter numbers separated by spaces: ")
+numbers_str = user_input.split()
+numbers = [float(num) for num in numbers_str]
 
+avg = average(numbers)
+print("The average is", avg)
 
+def is_prime(number):
+    if number < 2:
+        return False
+
+    for i in range(2, number):
+        if number % i == 0:
+            return False
+
+    return True
+
+user_input = input("Enter a number: ")
+number = int(user_input)
+
+if is_prime(number):
+    print(number, "is a prime number.")
+else:
+    print(number, "is not a prime number.")
 
 
 
@@ -108,8 +130,8 @@ print("\nTesting Problem 2:"+ str(odd_even(5)))
 
 
 
-print("\nTesting Problem 3:")
-# Add your tests here
+print("\nTesting Problem 3:"+ str(average[10, 20, 30, 40]))
+
 
 print("\nTesting Problem 4:")
 # Add your tests here
